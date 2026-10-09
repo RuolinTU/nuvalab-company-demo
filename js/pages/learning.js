@@ -1,7 +1,14 @@
-import { badge } from "../components.js";
-import { icon } from "../icons.js";
-export function learningPage() {
-  return `<div class="page-heading"><div><h1>Learning</h1><p>Turn useful feedback into better production decisions.</p></div></div>
+// Classic script: works from file:// and HTTPS. Keep private state scoped.
+(() => {
+  "use strict";
+  window.NuvaLab = window.NuvaLab || {};
+  const { badge } = window.NuvaLab.components;
+  const { icon } = window.NuvaLab.icons;
+  function learningPage() {
+    return `<div class="page-heading"><div><h1>Learning</h1><p>Turn useful feedback into better production decisions.</p></div></div>
  <section class="panel learning-review"><header class="panel-heading"><h2>Ready for review</h2><span class="count-label">1</span></header><div class="review-feature"><div><span class="category-label">STUDIO GUIDANCE</span><h3>A proposed style preference</h3><p>Review the context and scope before updating shared guidance.</p><span class="supporting-label">Creative studio · Production guidance</span></div><div class="review-actions">${badge("Candidate", "warning")}<button class="button" data-panel="preference">Review change ${icon("arrow-right")}</button></div></div></section>
  <div class="two-column section-spaced"><section class="panel explanatory-panel"><span class="section-icon">${icon("spark")}</span><h2>Agent & context improvements</h2><p>Preferences and working guidance that future runs can retrieve.</p><div class="empty-note">No adopted changes recorded yet.</div></section><section class="panel explanatory-panel"><span class="section-icon">${icon("server")}</span><h2>Model improvements</h2><p>Evaluated model updates, with their own dataset and deployment history.</p><div class="empty-note">No evaluated model candidates yet.</div></section></div>`;
-}
+  }
+
+  window.NuvaLab.learning = { learningPage };
+})();

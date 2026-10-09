@@ -1,7 +1,11 @@
-import { badge, keyValues } from "../components.js";
-import { icon } from "../icons.js";
-export function deploymentPage() {
-  return `<div class="page-heading"><div><h1>Deployment</h1><p>Your capacity, models, and production economics.</p></div>${badge("Not connected")}</div>
+// Classic script: works from file:// and HTTPS. Keep private state scoped.
+(() => {
+  "use strict";
+  window.NuvaLab = window.NuvaLab || {};
+  const { badge, keyValues } = window.NuvaLab.components;
+  const { icon } = window.NuvaLab.icons;
+  function deploymentPage() {
+    return `<div class="page-heading"><div><h1>Deployment</h1><p>Your capacity, models, and production economics.</p></div>${badge("Not connected")}</div>
  <section class="deployment-banner"><div class="deployment-symbol">${icon("server")}</div><div><h2>Dedicated to your workload.</h2><p>Connect a production environment to see its capacity and performance here.</p></div></section>
  <div class="two-column section-spaced"><section class="panel configuration-panel"><header class="panel-heading"><h2>Environment</h2></header>${keyValues(
    [
@@ -23,4 +27,7 @@ export function deploymentPage() {
  ]
    .map(([l, n]) => `<div><h3>${l}</h3><strong>—</strong><p>${n}</p></div>`)
    .join("")}</div></section>`;
-}
+  }
+
+  window.NuvaLab.deployment = { deploymentPage };
+})();
