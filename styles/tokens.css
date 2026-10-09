@@ -1,11 +1,4 @@
 /* Brand colors verified against https://nuvalab.ai/styles.css?v=20 on 2026-10-08. */
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../assets/fonts/ibm-plex-sans-400.ttf") format("truetype");
-}
 :root {
   color-scheme: light;
   --font-body: "IBM Plex Sans", Arial, sans-serif;
@@ -62,18 +55,4 @@
   --backdrop: #20382e38;
   --duration-fast: 140ms;
   --duration-normal: 200ms;
-}
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../assets/fonts/ibm-plex-sans-500.ttf") format("truetype");
-}
-@font-face {
-  font-family: "IBM Plex Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("../assets/fonts/ibm-plex-sans-600.ttf") format("truetype");
 }
