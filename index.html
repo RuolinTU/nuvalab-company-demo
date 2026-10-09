@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f7f7f3" />
+    <meta
+      name="description"
+      content="NuvaLab — your video production workspace."
+    />
+    <title>Overview · NuvaLab</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/ibm-plex-sans-400.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/overview.css" />
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Workspace navigation">
+        <a class="brand" href="#/overview" aria-label="NuvaLab overview"
+          ><span class="brand-mark" aria-hidden="true">n</span
+          ><span>nuvalab<span class="brand-period">.</span></span></a
+        >
+        <div class="workspace-card">
+          <span class="workspace-avatar">S</span>
+          <div><strong>Studio workspace</strong><span>Company demo</span></div>
+          <span class="status-dot" aria-hidden="true"></span>
+        </div>
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="main-nav" id="main-nav"></nav>
+        <div class="sidebar-bottom">
+          <div class="workspace-mode">
+            <span class="badge badge-neutral">Preview</span>
+            <p>Explore your production workspace.</p>
+          </div>
+          <a class="nav-item" href="#/settings" data-nav="settings">
+            <span data-icon="settings"></span><span>Workspace settings</span>
+          </a>
+          <div class="user-profile">
+            <span class="user-avatar">ST</span>
+            <div><strong>Studio team</strong><span>Workspace member</span></div>
+          </div>
+        </div>
+      </aside>
+      <div class="main-shell">
+        <header class="topbar">
+          <div class="breadcrumb">
+            <span>Workspace</span><span class="breadcrumb-slash">/</span
+            ><strong id="page-breadcrumb">Overview</strong>
+          </div>
+          <div class="topbar-actions">
+            <label class="search-box"
+              ><span data-icon="search"></span
+              ><input
+                id="workspace-search"
+                type="search"
+                placeholder="Search work"
+                aria-label="Search work"
+                autocomplete="off"
+              /><kbd aria-hidden="true">Ctrl K</kbd></label
+            ><button
+              class="icon-button"
+              id="help-button"
+              aria-label="About this workspace"
+            >
+              <span data-icon="help"></span>
+            </button>
+          </div>
+        </header>
+        <main id="main" class="page-content" tabindex="-1"></main>
+      </div>
+    </div>
+    <dialog
+      class="detail-dialog"
+      id="detail-dialog"
+      aria-labelledby="detail-title"
+    >
+      <div class="dialog-heading">
+        <div>
+          <span class="eyebrow" id="detail-eyebrow">WORKSPACE</span>
+          <h2 id="detail-title"></h2>
+        </div>
+        <button
+          class="icon-button"
+          id="close-detail"
+          aria-label="Close details"
+        >
+          <span data-icon="x"></span>
+        </button>
+      </div>
+      <div id="detail-content" class="dialog-content"></div>
+    </dialog>
+    <dialog
+      class="form-dialog"
+      id="goal-dialog"
+      aria-labelledby="goal-dialog-title"
+    >
+      <form id="goal-form">
+        <div class="dialog-heading">
+          <div>
+            <span class="eyebrow">ONGOING WORK</span>
+            <h2 id="goal-dialog-title">Start with a goal</h2>
+          </div>
+          <button
+            type="button"
+            class="icon-button"
+            id="close-goal"
+            aria-label="Close new goal"
+          >
+            <span data-icon="x"></span>
+          </button>
+        </div>
+        <div class="dialog-content">
+          <p class="form-intro">
+            Define the outcome. Your workspace keeps the context together.
+          </p>
+          <label class="field"
+            >Goal name<input
+              name="title"
+              required
+              maxlength="80"
+              placeholder="e.g. Weekly product updates" /></label
+          ><label class="field"
+            >What should this goal accomplish?<textarea
+              name="objective"
+              required
+              maxlength="1200"
+              rows="4"
+              placeholder="Describe the output, audience, and what good looks like."
+            ></textarea>
+          </label>
+          <div class="form-columns">
+            <label class="field"
+              >Trigger<select name="trigger">
+                <option>On request</option>
+                <option>Daily</option>
+                <option>Weekly</option>
+                <option>When a source is updated</option>
+              </select></label
+            ><label class="field"
+              >Review policy<select name="review">
+                <option>Review all outputs</option>
+                <option>Review exceptions</option>
+              </select></label
+            >
+          </div>
+          <p class="form-note">
+            <span data-icon="info"></span>This preview saves a local draft.
+            Production begins when a service is connected.
+          </p>
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+        </div>
+        <footer class="dialog-footer">
+          <button type="button" class="button" id="cancel-goal">Cancel</button
+          ><button type="submit" class="button button-primary">
+            Save draft goal <span data-icon="arrow-right"></span>
+          </button>
+        </footer>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </body>
+</html>

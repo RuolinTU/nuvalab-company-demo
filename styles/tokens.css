@@ -1,0 +1,79 @@
+/* Brand colors verified against https://nuvalab.ai/styles.css?v=20 on 2026-10-08. */
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/ibm-plex-sans-400.ttf") format("truetype");
+}
+:root {
+  color-scheme: light;
+  --font-body: "IBM Plex Sans", Arial, sans-serif;
+  --brand-cyan: #00f6f6;
+  --brand-highlight: #83f8f8;
+  --brand-mint: #dbf4f0;
+  --brand-teal: #00717c;
+  --brand-yellow: #ffd341;
+  --surface-canvas: #f7f7f3;
+  --surface-sidebar: #f0f2ed;
+  --surface-panel: #fff;
+  --surface-inset: #f3f5f1;
+  --surface-hover: #e8eeea;
+  --text-primary: #1e2929;
+  --text-secondary: #526160;
+  --text-muted: #63716e;
+  --border-subtle: #dfe5df;
+  --border-control: #bcc9c2;
+  --accent: var(--brand-highlight);
+  --accent-hover: #62eeee;
+  --accent-soft: var(--brand-mint);
+  --accent-text: var(--brand-teal);
+  --text-on-accent: #173334;
+  --focus: var(--brand-teal);
+  --success-text: #306c54;
+  --success-surface: #eaf4ed;
+  --warning-text: #735817;
+  --warning-surface: #fff3c7;
+  --info-text: #27656d;
+  --info-surface: #e8f3f2;
+  --danger-text: #a33f43;
+  --radius-control: 8px;
+  --radius-card: 14px;
+  --radius-panel: 16px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --text-xs: 14px;
+  --text-sm: 16px;
+  --text-base: 17px;
+  --text-lg: 21px;
+  --text-xl: 26px;
+  --text-title: 36px;
+  --text-metric: 36px;
+  --sidebar-width: 242px;
+  --topbar-height: 76px;
+  --page-max: 1500px;
+  --shadow-overlay: 0 12px 60px #20382e24;
+  --backdrop: #20382e38;
+  --duration-fast: 140ms;
+  --duration-normal: 200ms;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/ibm-plex-sans-500.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../assets/fonts/ibm-plex-sans-600.ttf") format("truetype");
+}
